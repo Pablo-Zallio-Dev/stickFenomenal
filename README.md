@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VitalisCenter
 
-## Getting Started
+Web para una clínica de fisioterapia, desarrollada como proyecto freelance de principio a fin: análisis, dirección visual, diseño, sistema de componentes y desarrollo.
 
-First, run the development server:
+El objetivo fue evitar la estética habitual del sector (blanco y azul, tarjetas genéricas, fotografía de stock) y construir una web editorial, cálida y tranquila que transmita confianza y cercanía.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Web:** [vitaliscenter.vercel.app](https://vitaliscenter.vercel.app/)
+- **Repositorio:** [github.com/Pablo-Zallio-Dev/vitaliscenter](https://github.com/Pablo-Zallio-Dev/vitaliscenter)
+
+![Vista en desktop](./docs/preview-desktop.png)
+![Vista en móvil](./docs/preview-mobile.png)
+
+## Páginas y funcionalidades
+
+- **Inicio**, **Servicios**, **Nosotros** y **Contacto**.
+- Formulario de contacto.
+- Llamada a la acción con enlace directo a WhatsApp.
+- Mapa con la ubicación de la clínica.
+- Diseño responsive, pensado primero para móvil.
+
+## Stack
+
+| Área | Tecnología |
+| --- | --- |
+| Framework | Next.js 16 (App Router) |
+| UI | React 19 |
+| Lenguaje | TypeScript |
+| Estilos | Tailwind CSS 4 |
+| Formularios | React Hook Form |
+| Estado | Zustand |
+| Animaciones | Motion |
+| Iconos | React Icons |
+| Gestor de paquetes | pnpm |
+| Despliegue | Vercel |
+
+## Decisiones principales
+
+- **Dirección visual editorial.** Fotografía protagonista, paleta cálida, tipografía con personalidad, mucho espacio y composición asimétrica, buscando referencias también fuera del sector sanitario.
+- **Mobile first.** Cada sección se construye primero para pantallas pequeñas y se amplía progresivamente a tablet y desktop. En el hero se usan imágenes distintas para móvil y desktop, pensadas para el espacio de cada uno.
+- **Sistema de componentes con Atomic Design.** En lugar de maquetar cada página como un bloque independiente, la interfaz se compone de átomos, moléculas y organismos reutilizables.
+- **Diseño con ayuda de IA.** El diseño de la interfaz se trabajó en Figma apoyándose en herramientas de IA. El desarrollo es propio.
+
+## Estructura del proyecto
+
+```
+app/
+├── components/
+│   ├── atoms/        # botones, tipografía, iconos, inputs
+│   ├── molecules/    # tarjetas, items de navegación, campos de formulario
+│   └── organisms/    # cabecera, secciones completas, footer
+└── page.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Empezar en local
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requisitos: Node.js y [pnpm](https://pnpm.io).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clonar el repositorio
+git clone https://github.com/Pablo-Zallio-Dev/vitaliscenter.git
+cd vitaliscenter
 
-## Learn More
+# Instalar dependencias
+pnpm install
 
-To learn more about Next.js, take a look at the following resources:
+# Servidor de desarrollo
+pnpm dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Abre [http://localhost:3000](http://localhost:3000) en el navegador.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts
 
-## Deploy on Vercel
+| Comando | Descripción |
+| --- | --- |
+| `pnpm dev` | Servidor de desarrollo |
+| `pnpm build` | Build de producción |
+| `pnpm start` | Servidor de producción (tras el build) |
+| `pnpm lint` | Análisis con ESLint |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Sobre el proyecto
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto forma parte de mi trabajo como desarrollador web frontend freelance. Documenté el proceso completo en una serie de publicaciones en LinkedIn.
